@@ -2,6 +2,10 @@ html * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 html, body, #map {
@@ -12,6 +16,11 @@ html, body, #map {
 
 .leaflet-container {
   cursor: default;
-  /* fix the issue in IE9 where the maps ends up on top of content */
+  /* Fix the issue in IE9 where the maps ends up on top of content */
   z-index: -10;
+}
+
+a {
+  /* Fix for IE10/11 */
+  background: transparent;
 }
