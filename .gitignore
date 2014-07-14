@@ -221,3 +221,6 @@ pip-log.txt
 # Sublime Text
 *.sublime-project
 *.sublime-workspace
+
+#docs
+todo.md

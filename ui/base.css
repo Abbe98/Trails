@@ -1,0 +1,11 @@
+html, body, #map {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-container {
+  cursor: default;
+  /* fix the issue in IE9 where the maps ends up on top of content */
+  z-index: -10;
+}

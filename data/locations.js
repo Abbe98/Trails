@@ -5,13 +5,14 @@
     "geometry": {
       "type": "Point",
       "coordinates": [
-        59.329444,
-        18.068611
+        59.33,
+        18.07
       ]
     },
     "properties": {
       "name": "Stockholm",
       "type": "city",
+      "country": "Sweden",
       "connections": {
         "car" : [
           "Gothenburg",
@@ -37,12 +38,13 @@
       "type": "Point",
       "coordinates": [
         57.7,
-        11.966667
+        11.97
       ]
     },
     "properties": {
       "name": "Gothenburg",
       "type": "city",
+      "country": "Sweden",
       "connections": {
         "car" : [
           "Stockholm",
@@ -66,13 +68,14 @@
     "geometry": {
       "type": "Point",
       "coordinates": [
-        55.605833,
-        13.035833
+        55.61,
+        13.03
       ]
     },
     "properties": {
       "name": "Malmö",
       "type": "city",
+      "country": "Sweden",
       "connections": {
         "car" : [
           "Copenhagen",
@@ -95,13 +98,14 @@
     "geometry": {
       "type": "Point",
       "coordinates": [
-        55.676111,
-        12.568333
+        55.68,
+        12.57
       ]
     },
     "properties": {
       "name": "Copenhagen",
       "type": "city",
+      "country": "Denmark",
       "connections": {
         "car" : [
           "Malmö"
@@ -131,6 +135,7 @@
     "properties": {
       "name": "Oslo",
       "type": "city",
+      "country": "Norway",
       "connections": {
         "car" : [
           "Gothenburg"
@@ -153,13 +158,14 @@
     "geometry": {
       "type": "Point",
       "coordinates": [
-        60.170833,
-        24.9375
+        60.17,
+        24.93
       ]
     },
     "properties": {
       "name": "Helsinki",
       "type": "city",
+      "country": "Finland",
       "connections": {
         "car" : [
         ],
