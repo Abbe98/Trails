@@ -1,186 +1,109 @@
-var geojsonFeature = {
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          18.07,
-          59.33
-        ]
-      },
-      "properties": {
-        "name": "Stockholm",
-        "type": "city",
-        "country": "Sweden",
-        "connections": {
-          "car" : [
-            "Gothenburg",
-            "Malmö"
-          ],
-          "train" : [
-            "Oslo",
-            "Copenhagen",
-          ],
-          "boat" : [
-            "Helsinki"
-          ],
-          "flight" : [
-          ]
-        },
-        "wikipedia": "http://en.wikipedia.org/wiki/Stockholm"
-      }
-    },
+var Stockholm = {
+  "coordinates": "18.07,59.33",
+  "country": "Sweden",
+  "connections": {
+    "car": [
+      "Gothenburg",
+      "Malmö"
+    ],
+    "train": [
+      "Oslo",
+      "Copenhagen"
+    ],
+    "boat": [
+      "Helsinki"
+    ],
+    "flight": [
+    ]
+  }
+};
 
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          11.97,
-          57.7
-        ]
-      },
-      "properties": {
-        "name": "Gothenburg",
-        "type": "city",
-        "country": "Sweden",
-        "connections": {
-          "car" : [
-            "Stockholm",
-            "Malmö"
-          ],
-          "train" : [
-            "Oslo",
-          ],
-          "boat" : [
-            "Copenhagen"
-          ],
-          "flight" : [
-          ]
-        },
-        "wikipedia": "http://en.wikipedia.org/wiki/Gothenburg"
-      }
-    },
+var Gothenburg = {
+  "coordinates": "11.97,57.7",
+  "country": "Sweden",
+  "connections": {
+    "car": [
+      "Stockholm",
+      "Malmö"
+    ],
+    "train": [
+      "Oslo"
+    ],
+    "boat": [
+      "Copenhagen"
+    ],
+    "flight": [
+    ]
+  }
+};
 
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.03,
-          55.61
-        ]
-      },
-      "properties": {
-        "name": "Malmö",
-        "type": "city",
-        "country": "Sweden",
-        "connections": {
-          "car" : [
-            "Copenhagen",
-            "Stockholm"
-          ],
-          "train" : [
-            "Gothenburg",
-          ],
-          "boat" : [
-          ],
-          "flight" : [
-          ]
-        },
-        "wikipedia": "http://en.wikipedia.org/wiki/Malmö"
-      }
-    },
+var Malmö = {
+  "coordinates": "13.03,55.61",
+  "country": "Sweden",
+  "connections": {
+    "car": [
+      "Copenhagen",
+      "Stockholm"
+    ],
+    "train": [
+      "Gothenburg"
+    ],
+    "boat": [
+    ],
+    "flight": [
+    ]
+  }
+};
 
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.57,
-          55.68
-        ]
-      },
-      "properties": {
-        "name": "Copenhagen",
-        "type": "city",
-        "country": "Denmark",
-        "connections": {
-          "car" : [
-            "Malmö"
-          ],
-          "train" : [
-          ],
-          "boat" : [
-            "Gothenburg"
-          ],
-          "flight" : [
-            "Stockholm"
-          ]
-        },
-        "wikipedia": "http://en.wikipedia.org/wiki/Copenhagen"
-      }
-    },
+var Copenhagen = {
+  "coordinates": "12.57,55.68",
+  "country": "Denmark",
+  "connections": {
+    "car": [
+      "Malmö"
+    ],
+    "train": [
+    ],
+    "boat": [
+      "Gothenburg"
+    ],
+    "flight": [
+      "Stockholm"
+    ]
+  }
+};
 
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.75,
-          59.95
-        ]
-      },
-      "properties": {
-        "name": "Oslo",
-        "type": "city",
-        "country": "Norway",
-        "connections": {
-          "car" : [
-            "Gothenburg"
-          ],
-          "train" : [
-            "Stockholm"
-          ],
-          "boat" : [
-          ],
-          "flight" : [
-            "Copenhagen"
-          ]
-        },
-        "wikipedia": "http://en.wikipedia.org/wiki/Oslo"
-      }
-    },
+var Oslo = {
+  "coordinates": "10.75,59.95",
+  "country": "Norway",
+  "connections": {
+    "car": [
+      "Gothenburg"
+    ],
+    "train": [
+      "Stockholm"
+    ],
+    "boat": [
+    ],
+    "flight": [
+      "Copenhagen"
+    ]
+  }
+};
 
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          24.93,
-          60.17
-        ]
-      },
-      "properties": {
-        "name": "Helsinki",
-        "type": "city",
-        "country": "Finland",
-        "connections": {
-          "car" : [
-          ],
-          "train" : [
-          ],
-          "boat" : [
-          "Stockholm"
-          ],
-          "flight" : [
-            "Copenhagen"
-          ]
-        },
-        "wikipedia": "http://en.wikipedia.org/wiki/Helsinki"
-      }
-    }
-  ]
-}
+var Helsinki = {
+  "coordinates": "24.93,60.17",
+  "country": "Finland",
+  "connections": {
+    "car": [
+    ],
+    "train": [
+    ],
+    "boat": [
+      "Stockholm"
+    ],
+    "flight": [
+      "Copenhagen"
+    ]
+  }
+};
