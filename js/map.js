@@ -7,4 +7,4 @@ var map = L.mapbox.map('map', 'examples.map-i86nkdio', {
   tap: false,
   keyboard: false,
   zoomControl: false
-}).setView([0, 0], 2);
+}).setView([0, 0], 3);

@@ -5,14 +5,38 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <title>Trails</title>
 
-    <link rel="stylesheet" href="ui/base.css">
+    <link rel="stylesheet"  href="ui/loading.css"/>
   </head>
   <body>
-    <main id="map">
-    </main>
+    <!-- Loading overlay -->
+    <div id="loading">
+      <canvas id="loader" height="250" width="250"></canvas>
+      <script src="js/loading.js"></script>
+    </div>
 
+    <!-- Map -->
+    <div id="map">
+    </div>
+
+    <div class="bar">
+      <a href="#" class="header">Trails</a>
+      <a href="#">Badges</a>
+      <a href="#">Settings</a>
+    </div>
+
+    <!-- CSS -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic" rel="stylesheet">
+    <link rel="stylesheet" href="ui/base.css"/>
+
+    <!-- Load Mapbox -->
     <script src="https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js"></script>
     <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css"/>
     <script src="js/map.js"></script>
+
+    <script>
+    // remove 'loading'
+    var loader = document.getElementById('loading');
+    loader.parentNode.removeChild(loader);
+    </script>
   </body>
 </htm>
