@@ -36,3 +36,6 @@ Main CSS file.
 
  - `loading.css`
 Contains position CSS for the canvas loader and its wrapper.
+
+ - `boxes.css`
+Contains position and animation rules for content containers(boxes).
