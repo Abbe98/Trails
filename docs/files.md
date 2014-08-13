@@ -21,10 +21,18 @@ Contains a object for each available location where its proprieties is stored, s
  - `files.md`
 Contains descriptions of each project files.
 
+###trails/icons
+
+ - `city-18.png`
+PNG icon for city locations
+
 ###trails/js
 
  - `loading.js`
 Draws the canvas loader to `id="loading"` when app loads.
+
+ - `main.js`
+Contains major game functions for game data and map stuff.
 
  - `map.js`
 Contains the map(Mapbox) config.

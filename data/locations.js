@@ -1,5 +1,5 @@
 var Stockholm = {
-  "coordinates": "18.07,59.33",
+  "coordinates": [18.07, 59.33],
   "country": "Sweden",
   "name": "Stockholm",
   "connections": {
@@ -20,7 +20,7 @@ var Stockholm = {
 };
 
 var Gothenburg = {
-  "coordinates": "11.97,57.7",
+  "coordinates": [11.97, 57.7],
   "country": "Sweden",
   "name": "Gothenburg",
   "connections": {
@@ -40,7 +40,7 @@ var Gothenburg = {
 };
 
 var Malmö = {
-  "coordinates": "13.03,55.61",
+  "coordinates": [13.03, 55.61],
   "country": "Sweden",
   "name": "Malmö",
   "connections": {
@@ -59,7 +59,7 @@ var Malmö = {
 };
 
 var Copenhagen = {
-  "coordinates": "12.57,55.68",
+  "coordinates": [12.57, 55.68],
   "country": "Denmark",
   "name": "Copenhagen",
   "connections": {
@@ -78,7 +78,7 @@ var Copenhagen = {
 };
 
 var Oslo = {
-  "coordinates": "10.75,59.95",
+  "coordinates": [10.75, 59.95],
   "country": "Norway",
   "name": "Oslo",
   "connections": {
@@ -97,7 +97,7 @@ var Oslo = {
 };
 
 var Helsinki = {
-  "coordinates": "24.93,60.17",
+  "coordinates": [24.93, 60.17],
   "country": "Finland",
   "name": "Helsinki",
   "connections": {

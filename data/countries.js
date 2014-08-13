@@ -1,4 +1,4 @@
-countries {
+var countries = {
   "europe": [
     "Finland",
     "Denmark",
