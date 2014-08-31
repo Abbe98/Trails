@@ -31,6 +31,9 @@ PNG icon for city locations
  - `loading.js`
 Draws the canvas loader to `id="loading"` when app loads.
 
+- `localforage.js`
+The localforage library from Mozilla.
+
  - `main.js`
 Contains major game functions for game data and map stuff.
 
