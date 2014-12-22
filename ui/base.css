@@ -18,6 +18,10 @@ html, body, #map {
   cursor: default;
 }
 
+.leaflet-control-attribution {
+  display: none;
+}
+
 a {
   /* Fix for IE10/11 */
   background: transparent;
@@ -50,7 +54,7 @@ a {
 }
 
 .bar a:hover {
-background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .bar *:first-child {
@@ -61,4 +65,29 @@ background: rgba(0, 0, 0, 0.7);
 .bar *:last-child {
   border-radius: 0px 7px 7px 0px;
   border-left: 2px solid white;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: #fff;
+}
+
+footer p {
+  padding: 0;
+  margin: 4px;
+  float: left;
+}
+
+footer p a:active,
+footer p a:focus,
+footer p a:hover,
+footer p a {
+  color: #fff;
+}
+
+footer .attribution {
+  float: right;
 }

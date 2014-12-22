@@ -6,6 +6,7 @@
   opacity: 0;
   transition: opacity .5s ease-in-out;
   overflow: hidden;
+  z-index: 1;
 }
 
 .box .inner {
@@ -18,9 +19,12 @@
   height: 50%;
   width: 90%;
   padding: 10px;
-  text-align: center;
   background-color: white;
   transition: .5s ease-in-out;
+}
+
+.box .inner h2 {
+  text-align: center;
 }
 
 a.box-close {
@@ -68,4 +72,15 @@ a.box-close:after {
 .box:target .inner,
 .box:target a.box-close {
   top: 0;
+}
+
+#content-box {
+  position: absolute;
+  top: -500px;
+  right: 8px;
+  height: 50%;
+  width: 40%;
+  padding: 10px;
+  background-color: white;
+  transition: .5s ease-in-out;
 }

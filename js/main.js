@@ -126,10 +126,37 @@ function get_location_var_from_string(location_string) {
   }
 }
 
+function open_location_window() {
+  // add content based on current_location
+  localforage.getItem('current_location', function(current_location) {
+    
+  });
+  // display the #content-box div by setting top to 54px
+  document.getElementById('content-box').style.top = '54px';
+}
+
+function travel(cost, type, location) {
+  
+}
+
 function add_cash(value) {
   // read current cash from local
   localforage.getItem('cash', function(cash) {
     // set local cash to old cash + the new one
     localforage.setItem('cash', cash + value);
+
+    // update cash display value
+    document.getElementById('cash').innerHTML = cash + value;
+  });
+}
+
+function remove_cash(value) {
+  // read current cash from local
+  localforage.getItem('cash', function(cash) {
+    // set local cash to old cash - value
+    localforage.setItem('cash', cash - value);
+
+    // update cash display value
+    document.getElementById('cash').innerHTML = cash - value;
   });
 }

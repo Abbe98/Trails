@@ -10,21 +10,18 @@ ReadMe/Git config
 
 ###trails/data
 
- - `countries.js`
-List of available countries sorted in arrays by continent.
-
  - `locations.js`
 Contains a object for each available location where its proprieties is stored, such as connections, coordinates and country.
+
+###trails/icons
+
+ - `city-18.png`
+PNG icon for city locations(from Maki).
 
 ###trails/docs
 
  - `files.md`
 Contains descriptions of each project files.
-
-###trails/icons
-
- - `city-18.png`
-PNG icon for city locations
 
 ###trails/js
 
