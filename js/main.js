@@ -87,7 +87,7 @@ function load_location(location) {
 }
 
 // make markers array global
-var markers = []; 
+var markers = [];
 function output_marker(location) {
   // add marker to markers array
   markers[markers.length] = L.marker([location.coordinates[1] , location.coordinates[0]], {icon: cityIcon}).bindPopup(location.name).addTo(map);
@@ -127,16 +127,18 @@ function get_location_var_from_string(location_string) {
 }
 
 function open_location_window() {
+  var header = document.getElementById('location_name');
   // add content based on current_location
   localforage.getItem('current_location', function(current_location) {
-    
+    console.log(current_location.name);
   });
   // display the #content-box div by setting top to 54px
   document.getElementById('content-box').style.top = '54px';
 }
 
 function travel(cost, type, location) {
-  
+  remove_cash(cost);
+  load_location(location);
 }
 
 function add_cash(value) {
