@@ -20,15 +20,15 @@ var MapIcon = L.Icon.extend({
 var cityIcon = new MapIcon({iconUrl: 'icons/city-18.png'});
 
 // set game version
-var current_version = 0.1;
+var currentVersion = 0.1;
 
 
 localforage.getItem('version', function(version) {
-  if (version === current_version) {
+  if (version === currentVersion) {
     // load saved game
-    load_saved_game();
+    loadSavedGame();
   } else {
     // new game
-    new_game();
+    newGame();
   };
 });

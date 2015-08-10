@@ -1,9 +1,9 @@
-function new_game() {
+function newGame() {
   // remove old game data if it exists
   localforage.clear();
 
   // set game version(see map.js)
-  localforage.setItem('version', current_version);
+  localforage.setItem('version', currentVersion);
 
   // set default travel booleans 
   localforage.setItem('car', true);
@@ -23,41 +23,41 @@ function new_game() {
   localforage.setItem('cash', 10000);
 
   // use Stockholm as start location
-  load_location(Stockholm);
+  loadLocation(Stockholm);
 }
 
-function load_saved_game() {
+function loadSavedGame() {
   // load last location
-  localforage.getItem('current_location', function(current_location) {
-    load_location(current_location);
+  localforage.getItem('currentLocation', function(currentLocation) {
+    loadLocation(currentLocation);
   });
 }
 
-function load_location(location) {
+function loadLocation(location) {
   // store current location
-  var current_location = location;
-  localforage.setItem('current_location', current_location);
+  var currentLocation = location;
+  localforage.setItem('currentLocation', currentLocation);
 
   // remove existing markers
-  clear_markers();
+  clearMarkers();
 
   // put current location on map
-  output_marker(current_location);
+  outputMarker(currentLocation);
 
   // get and output all default(car) connected locations
   for(var i = 0; i < location.connections.car.length; i++) {
     // get JS object from string
-    var connected_location = get_location_var_from_string(location.connections.car[i]);
+    var connectedLocation = getLocationVarFromString(location.connections.car[i]);
     // output marker
-    output_marker(connected_location);
+    outputMarker(connectedLocation);
   }
 
   // if travel by train is unlocked output markers in for loop
   localforage.getItem('train', function(train) {
     if(train === true) {
       for(var i = 0; i < location.connections.train.length; i++) {
-        var connected_location = get_location_var_from_string(location.connections.train[i]);
-        output_marker(connected_location);
+        var connectedLocation = getLocationVarFromString(location.connections.train[i]);
+        outputMarker(connectedLocation);
       }
     }
   });
@@ -66,8 +66,8 @@ function load_location(location) {
   localforage.getItem('boat', function(boat) {
     if(boat === true) {
       for(var i = 0; i < location.connections.boat.length; i++) {
-        var connected_location = get_location_var_from_string(location.connections.boat[i]);
-        output_marker(connected_location);
+        var connectedLocation = getLocationVarFromString(location.connections.boat[i]);
+        outputMarker(connectedLocation);
       }
     }
   });
@@ -76,32 +76,32 @@ function load_location(location) {
   localforage.getItem('flight', function(flight) {
     if(flight === true) {
       for(var i = 0; i < location.connections.flight.length; i++) {
-        var connected_location = get_location_var_from_string(location.connections.flight[i]);
-        output_marker(connected_location);
+        var connectedLocation = getLocationVarFromString(location.connections.flight[i]);
+        outputMarker(connectedLocation);
       }
     }
   });
 
   // set new map center
-  map.setView(new L.LatLng(current_location.coordinates[1] , current_location.coordinates[0]), 5);
+  map.setView(new L.LatLng(currentLocation.coordinates[1] , currentLocation.coordinates[0]), 5);
 }
 
 // make markers array global
 var markers = [];
-function output_marker(location) {
+function outputMarker(location) {
   // add marker to markers array
   markers[markers.length] = L.marker([location.coordinates[1] , location.coordinates[0]], {icon: cityIcon}).bindPopup(location.name).addTo(map);
 }
 
-function clear_markers() {
+function clearMarkers() {
   // remove all markers using for loop
   for(var i = 0; i < markers.length; i++) {
     map.removeLayer(markers[i]);
   }
 }
 
-function get_location_var_from_string(location_string) {
-  switch (location_string) {
+function getLocationVarFromString(locationString) {
+  switch (locationString) {
     case 'Stockholm':
       return Stockholm;
       break;
@@ -122,26 +122,25 @@ function get_location_var_from_string(location_string) {
       break;
     default:
       // TODO: add some error function
-      console.log('Error: get_location_var_from_string() hit default(Location string not found)');
+      console.log('Error: getLocationVarFromString() hit default(Location string not found)');
   }
 }
 
-function open_location_window() {
-  var header = document.getElementById('location_name');
-  // add content based on current_location
-  localforage.getItem('current_location', function(current_location) {
-    console.log(current_location.name);
+function openLocationWindow() {
+  // add content based on currentLocation
+  localforage.getItem('currentLocation', function(currentLocation) {
+    console.log(currentLocation.name);
   });
   // display the #content-box div by setting top to 54px
   document.getElementById('content-box').style.top = '54px';
 }
 
 function travel(cost, type, location) {
-  remove_cash(cost);
-  load_location(location);
+  removeCash(cost);
+  loadLocation(location);
 }
 
-function add_cash(value) {
+function addCash(value) {
   // read current cash from local
   localforage.getItem('cash', function(cash) {
     // set local cash to old cash + the new one
@@ -152,7 +151,7 @@ function add_cash(value) {
   });
 }
 
-function remove_cash(value) {
+function removeCash(value) {
   // read current cash from local
   localforage.getItem('cash', function(cash) {
     // set local cash to old cash - value
