@@ -27,7 +27,6 @@ localforage.getItem('version', function(version) {
   if (version === current_version) {
     // load saved game
     load_saved_game();
-
   } else {
     // new game
     new_game();
